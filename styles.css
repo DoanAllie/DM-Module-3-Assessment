@@ -50,3 +50,19 @@ img {
 .container form button {
 	display: block;
 }
+
+.buttons {
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	background-color: yellow;
+	padding: 8px 10px;
+	border: 1px solid gray;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.1);
+
+	border-radius: 3px;
+}
+.btn:active {
+	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
