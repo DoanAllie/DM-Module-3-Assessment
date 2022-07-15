@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood</title>
+	<link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <a href="./home.html"><< Back </a>
+    <nav>
+		<ol>
+	        <li class="crumb"><a href="./home.html">Home</a></li>
+	        <li class="crumb"><a href="./profile.html">Profile</a></li>
+	        <li class="crumb"><a href="./about.html">About</a></li>
+            <li class="crumb"><a href="./neighborhood.html">Neighborhood</a></li>
+	    </ol>
+	</nav>
+    <div class="neighborhood">
+        <h1>City Center</h1>
+        <p>Tiramisu jelly donut croissant lollipop sweet roll marshmallow. Gummies sweet roll fruitcake chupa chups carrot cake caramels. Cake macaroon shortbread candy lemon drops. Dessert shortbread cake chocolate bar soufflé.</p>
+        <br>
+        <h4>Restaurants</h4>
+        <a class="restaurants" href="https://fegesbbq.com/">Feges BBQ</a>
+        <a class="restaurants" href="https://www.truthbbq.com/">Truth Barbeque</a>
+        <a class="restaurants" href="https://www.posthtx.com/eat">Post Market</a>
+        <a class="restaurants" href="https://www.nancyshustle.com/">Nancy's Hustle</a>
+        <a class="restaurants" href="https://www.nancyshustle.com/">Brenner's Steakhouse </a>
+        <br>
+        <h4>Nature & Parks</h4>
+        <a href="https://www.houstonzoo.org/">Houston Zoo</a>
+        <a href="https://www.hmns.org/cockrell-butterfly-center/">Cockrell Butterfly Center</a>
+        <a href="https://www.discoverygreen.com/">Discovery Green</a>
+        <a href="https://www.mfah.org/visit/bayou-bend-collection-and-gardens/">Bayou Bend Collection and Gardens</a>
+        <a href="https://buffalobayou.org/visit/destination/buffalo-bayou-park/">Buffalo Bayou Park</a>
+        <br>
+    </div>
+    <button id="randomBtn">Generate a random restaurant</button>
+    <section></section>
+
+    <script>
+        const restaurantLinks = {
+            'Feges BBQ': "https://fegesbbq.com/",
+            'Truth Barbeque': "https://www.truthbbq.com/",
+            'Post Market': "https://www.posthtx.com/eat",
+            'Nancy\'s Hustle': "https://www.nancyshustle.com/",
+            'Buffalo\'s Bayou Park': "https://www.nancyshustle.com/",
+        }
+        const restaurantArray = ['Feges BBQ', 'Truth Barbeque', 'Post Market', 'Nancy\'s Hustle', 'Buffalo\'s Bayou Park']
+
+        const randomBtn = document.querySelector('#randomBtn')
+
+        function generateRestaurant() {
+            const randomNumber = Math.floor(Math.random() * restaurantArray.length)
+            const section = document.querySelector('section')
+            section.textContent = ''
+            const restaurant = document.createElement('a')
+            restaurant.textContent = `${restaurantArray[randomNumber]}`
+            restaurant.setAttribute('href', `${restaurantLinks[restaurant.textContent]}`)
+            restaurant.style.display = 'block'
+            section.appendChild(restaurant)
+        }
+
+        randomBtn.addEventListener('click', generateRestaurant)
+    </script>
+</body>
+</html>

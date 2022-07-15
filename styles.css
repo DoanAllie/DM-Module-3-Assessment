@@ -37,12 +37,8 @@ img {
 	max-width: 300px;
 }
 
+
 /* CSS for Profile Page */
-
-.wrapper {
-	margin-top: 50px;
-}
-
 .container {
 	padding-bottom: 5px;
 }
@@ -65,4 +61,15 @@ img {
 }
 .btn:active {
 	box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+}
+
+
+/* CSS for Neighborhood Page */
+.neighborhood a {
+	display: block;
+}
+
+#randomBtn {
+	margin: 30px 0 10px 0;
+	padding: 6px 10px;
 }
