@@ -36,3 +36,17 @@ input {
 img {
 	max-width: 300px;
 }
+
+/* CSS for Profile Page */
+
+.wrapper {
+	margin-top: 50px;
+}
+
+.container {
+	padding-bottom: 5px;
+}
+
+.container form button {
+	display: block;
+}
